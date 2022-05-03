@@ -1,0 +1,29 @@
+
+  <!-- Button trigger modal -->
+  <button type="button" class="btn btn-primary" data-bs-toggle="modal" *ngIf="!guardando" data-bs-target="#exampleModal">
+    Agregar Nuevo Usuario
+  </button> 
+  <div class="spinner-border text-primary" role="status" *ngIf="guardando">
+    <span class="visually-hidden">Loading...</span>
+</div>
+<table class="table" style="width: 100%;">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Apellido</th>
+        <th scope="col">Telefono</th>
+        <th scope="col">Clave</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of usuarios; let i= index">
+        <th scope="row">{{ i+1 }}</th>
+        <td>{{ item.name.firstname }}</td>
+        <td>{{ item.name.lastname }}</td>
+        <td>{{ item.phone }}</td>
+        <td>{{ item.password }}</td>
+      </tr> 
+    </tbody>
+  </table>
+  <app-add-usuario></app-add-usuario>
