@@ -1,12 +1,13 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpParams } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { Usuario } from '../interfaces/usuario.interface';
+import { variablesTienda } from 'src/app/shared/variables';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UsuarioService {
-  private servicioUrl = 'https://fakestoreapi.com/';
+  private servicioUrl = variablesTienda.urlApi;
   private _guardando = false;
   private _usuarios:Usuario[] =[] ;
 

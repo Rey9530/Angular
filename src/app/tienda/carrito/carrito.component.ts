@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-carrito',
@@ -6,11 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styles: [
   ]
 })
-export class CarritoComponent implements OnInit {
+export class CarritoComponent   {
 
   constructor() { }
-
-  ngOnInit(): void {
-  }
-
+ 
 }

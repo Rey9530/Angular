@@ -4,6 +4,7 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
+import { TiendaModule } from './tienda/tienda.module';
 import { UsuariosModule } from './usuarios/usuarios.module';
 
 @NgModule({
@@ -13,8 +14,9 @@ import { UsuariosModule } from './usuarios/usuarios.module';
   imports: [
     BrowserModule,
     UsuariosModule,
+    TiendaModule,
     AppRoutingModule,
-    SharedModule
+    SharedModule, 
   ],
   providers: [],
   bootstrap: [AppComponent]

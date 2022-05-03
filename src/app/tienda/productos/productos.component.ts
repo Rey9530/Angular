@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { ProductoService } from '../services/producto.service'; 
 
 @Component({
   selector: 'app-productos',
@@ -6,11 +7,30 @@ import { Component, OnInit } from '@angular/core';
   styles: [
   ]
 })
-export class ProductosComponent implements OnInit {
+export class ProductosComponent  {
 
-  constructor() { }
 
-  ngOnInit(): void {
+  get categorias (){
+    return this.serpro.categorias;
   }
+
+  get cargando (){
+    return this.serpro.cargando;
+  }
+  get productos (){
+    console.log(this.serpro.productos)
+    return this.serpro.productos;
+  }
+
+  cargarCategorias(category:string){ 
+    this.serpro.obtenerProductos(category)
+  }
+
+  agregar_carrito(category:number){ 
+    this.serpro.agregar_carrito(category)
+  }
+
+  constructor(private serpro: ProductoService) { }
+ 
 
 }
