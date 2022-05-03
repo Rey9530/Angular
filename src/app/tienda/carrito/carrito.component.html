@@ -1,1 +1,15 @@
-<p>carrito works!</p>
+
+<div class="row"  *ngIf="productoscarrito.length>0" >
+    <div class="col-3" *ngFor="let item of productoscarrito">
+        <div class="card doc"  >
+            <div class="user-bg">
+                <img class="card-img-top" style="width: 100%;max-height: 200px;" src="{{ item.image }}" alt="Card image cap">
+            </div>
+            <div class="card-body">
+            <h5 class="card-title muchotexto">{{ item.title }}</h5>
+            <p class="card-text muchotexto">{{ item.description }}</p>
+            <button (click)="eliminar_carrito(item.id)" href="#" class="btn btn-primary">Eliminar - {{ item.price }} </button>
+            </div>
+        </div>
+    </div>
+</div>

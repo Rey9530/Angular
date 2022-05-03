@@ -34,6 +34,9 @@ export class ProductoService {
   get productos(){  
     return [...this._productos];
   }
+  get carrito_encarrito(){  
+    return [...this.carrito];
+  }
 
   
   cargarCategorias (){
@@ -58,6 +61,16 @@ export class ProductoService {
   agregar_carrito (id:number){ 
     this._productos.forEach(element => {
       if(element.id==id){
+        this.carrito.push(element);
+      }
+    });
+  }
+  
+  eliminar_carrito (id:number){ 
+    let data =  this.carrito;
+    this.carrito = [];
+    data.forEach(element => {
+      if(element.id!==id){
         this.carrito.push(element);
       }
     });
