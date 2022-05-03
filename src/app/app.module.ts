@@ -1,22 +1,20 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 
-import { AppComponent } from './app.component';
-import { SharedModule } from './shared/shared.module';
-import { TiendaModule } from './tienda/tienda.module';
-import { UsuariosModule } from './usuarios/usuarios.module';
+import { AppComponent } from './app.component'; 
 
 @NgModule({
   declarations: [
     AppComponent
   ],
   imports: [
-    BrowserModule,
-    UsuariosModule,
-    TiendaModule,
-    AppRoutingModule,
-    SharedModule, 
+    BrowserModule, 
+    HttpClientModule,
+    AppRoutingModule, 
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

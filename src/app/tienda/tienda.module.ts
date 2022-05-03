@@ -16,7 +16,8 @@ import { CarritoComponent } from './carrito/carrito.component';
     HttpClientModule
   ],
   exports:[
-    ProductosComponent
+    ProductosComponent,
+    CarritoComponent
   ]
 })
 export class TiendaModule { }

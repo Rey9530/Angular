@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core'; 
 import { LoginComponent } from './login/login.component'; 
-import { RouterModule, Routes } from '@angular/router';
-import { VerUsuariosComponent } from '../usuarios/ver-usuarios/ver-usuarios.component';
-import { ProductosComponent } from '../tienda/productos/productos.component';
-import { CarritoComponent } from '../tienda/carrito/carrito.component';
+import {  Routes } from '@angular/router'; 
+import { AuthRoutingModule } from './auth-routing.module';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+
 
 const rutas : Routes= [
   {
@@ -26,9 +27,13 @@ const rutas : Routes= [
 @NgModule({
   declarations: [ 
     LoginComponent
-  ], 
-  exports:[ 
-    LoginComponent
-  ]
+  ],
+  imports: [
+    CommonModule,
+    FormsModule,
+    AuthRoutingModule, 
+  ] 
 })
 export class LogiModule { }
+
+ 
